@@ -123,6 +123,7 @@ def main(args, resume_preempt=False):
 
     # -- LOGGING
     folder = args['logging']['folder']
+    os.makedirs(folder, exist_ok=True)
     tag = args['logging']['write_tag']
 
     dump = os.path.join(folder, 'params-ijepa.yaml')
